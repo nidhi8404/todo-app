@@ -9,12 +9,12 @@ connectDB();
 app.use(cors());
 
 app.use(express.json({extended : false}));
-app.get("/", (req,res) => res.send("Server is running"));
+app.get("/", (req,res) => res.send("Server is running"));            
 
 app.use("/api/ToDo" , ToDo);
 
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000  ;
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
